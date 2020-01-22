@@ -1,0 +1,21 @@
+@import "../../../colors";
+
+.option {
+  display: inline-block;
+  color: $red;
+  background: $white;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 10px;
+}
+
+.option:hover {
+  background: $dark-orange;
+  color: $white;
+}
+
+.selected {
+  background: black;
+  color: $orange;
+}
+

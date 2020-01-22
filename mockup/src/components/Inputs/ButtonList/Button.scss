@@ -1,0 +1,15 @@
+@import "../../../colors";
+
+.button {
+  display: inline-block;
+  color: $red;
+  background: $white;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background: $dark-orange;
+  color: $white;
+}
