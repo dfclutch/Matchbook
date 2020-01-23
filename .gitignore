@@ -1,3 +1,5 @@
 *.idea
 
 /mockup/node_modules
+
+/mockup/build

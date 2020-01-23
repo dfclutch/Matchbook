@@ -8,10 +8,11 @@ class ButtonList extends Component {
     renderButtons() {
         return (
             <div>
-                {this.props.buttons.map(text => {
+                {this.props.buttons.map((text, ind) => {
                         return <Button
+                            key={ind}
                             text={text}
-                            onClick={this.props.onClick}
+                            onClick={this.props.nextQuestion}
                         />
                     }
                 )}

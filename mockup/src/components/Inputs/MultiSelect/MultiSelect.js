@@ -15,8 +15,7 @@ class MultiSelect extends Component {
 
     select(index) {
         this.setState(state => {
-            let new_selected = state.selected[index] = true;
-            return {new_selected}
+            return state.selected[index] = !state.selected[index];
         })
     }
     renderOptions() {
@@ -42,7 +41,7 @@ class MultiSelect extends Component {
                 <br/>
                 <Button
                     text="Done"
-                    onClick={this.props.onClick}
+                    onClick={this.props.nextQuestion}
                 />
             </div>
         );

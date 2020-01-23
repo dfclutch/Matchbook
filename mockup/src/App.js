@@ -1,18 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
 import './components/QuestionCard/QuestionCard';
 import QuestionCard from "./components/QuestionCard/QuestionCard";
 import {INPUT_TYPES} from "./config";
 
-function App() {
-  let questions = [
+class App extends Component{
+
+  questions = [
     {
       text: "I want...",
       input_type: INPUT_TYPES.BUTTON_LIST,
       options: [
-          "a recommendation based off previous books I've read",
-          "A recommendation based off my genre preferences"
+        "A recommendation based off previous books I've read",
+        "A recommendation based off my genre preferences"
       ]
     },
     {
@@ -47,11 +48,27 @@ function App() {
     }
   ];
 
-  return (
-    <QuestionCard
-        question_list={questions}
-    />
-  );
+  constructor(props) {
+    super(props);
+    this.state = {
+      current_question: this.questions.shift()
+    };
+    this.nextQuestion = this.nextQuestion.bind(this);
+  }
+  nextQuestion() {
+    this.setState({
+      current_question: this.questions.shift()
+    })
+  }
+
+  render() {
+    return (
+        <QuestionCard
+            question={this.state.current_question}
+            nextQuestion={this.nextQuestion}
+        />
+    );
+  }
 }
 
 export default App;
