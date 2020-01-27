@@ -10,4 +10,5 @@
 - clone git repo
 - install node.js, npm
 - in command line cd into `/mockup`
+- run  `npm ci` or `npm install` to install all dependencies
 - run `npm run start` - this should open a window in your default browser running the app! 
