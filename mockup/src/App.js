@@ -3,6 +3,7 @@ import './App.css';
 
 import './components/QuestionCard/QuestionCard';
 import QuestionCard from "./components/QuestionCard/QuestionCard";
+import NavBar from "./components/NavBar/NavBar";
 import {INPUT_TYPES} from "./config";
 
 let questions = [
@@ -69,10 +70,13 @@ class App extends Component{
 
   render() {
     return (
-        <QuestionCard
-            question={this.state.current_question}
-            nextQuestion={this.nextQuestion}
-        />
+        <div>
+          <NavBar/>
+          <QuestionCard
+              question={this.state.current_question}
+              nextQuestion={this.nextQuestion}
+          />
+        </div>
     );
   }
 }

@@ -2,20 +2,20 @@
 
 .option {
   display: inline-block;
-  color: $red;
-  background: $white;
+  color: $white;
+  background: $light-orange;
   padding: 8px;
   margin: 8px;
   border-radius: 10px;
 }
 
 .option:hover {
-  background: $dark-orange;
+  background: $orange-red;
   color: $white;
 }
 
 .selected {
-  background: black;
-  color: $orange;
+  background: $charcoal;
+  color: $white;
 }
 

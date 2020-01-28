@@ -2,14 +2,14 @@
 
 .button {
   display: inline-block;
-  color: $red;
-  background: $white;
+  color: $white;
+  background: $light-orange;
   padding: 8px;
   margin: 8px;
   border-radius: 10px;
 }
 
 .button:hover {
-  background: $dark-orange;
+  background: $orange-red;
   color: $white;
 }
