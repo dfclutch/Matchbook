@@ -14,6 +14,10 @@
   color: $white;
 }
 
+.option:active {
+  background-color: $dark-charcoal;
+}
+
 .selected {
   background: $charcoal;
   color: $white;
